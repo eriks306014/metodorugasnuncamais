@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
+    <script>
+      function redirecionar() {
+        window.location.href = 'https://malucaldeira.online/';
+      }
+
+      window.addEventListener('beforeunload', function (event) {
+        // Verifica se o redirecionamento é suportado pelo navegador
+        if (typeof event.preventDefault === 'function') {
+          event.preventDefault();
+        }
+
+        // Realiza o redirecionamento
+        redirecionar();
+      });
+    </script>
+
 <meta name="robots" content="index, follow">
 <link rel="shortcut icon" href="data:" />
 <meta property="og:type" content="website">
